@@ -1,0 +1,214 @@
+DEBUG - 2025-12-15 14:14:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-15 14:15:21 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\pbo_rasya\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\pbo_rasya\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'dbpbo_rasya', 3306, '', 0)
+#1 C:\xampp\htdocs\pbo_rasya\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\pbo_rasya\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\pbo_rasya\system\Database\BaseBuilder.php(1787): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\pbo_rasya\system\Model.php(928): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 C:\xampp\htdocs\pbo_rasya\app\Models\M_karyawan.php(12): CodeIgniter\Model->__call('getWhere', Array)
+#6 C:\xampp\htdocs\pbo_rasya\app\Controllers\Login.php(18): App\Models\M_karyawan->cek_login('IE02', '12345')
+#7 C:\xampp\htdocs\pbo_rasya\system\CodeIgniter.php(933): App\Controllers\Login->proses()
+#8 C:\xampp\htdocs\pbo_rasya\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\xampp\htdocs\pbo_rasya\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\pbo_rasya\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\pbo_rasya\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\pbo_rasya\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\pbo_rasya\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\pbo_rasya\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\pbo_rasya\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\pbo_rasya\system\Database\BaseBuilder.php(1787): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\pbo_rasya\system\Model.php(928): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#4 C:\xampp\htdocs\pbo_rasya\app\Models\M_karyawan.php(12): CodeIgniter\Model->__call('getWhere', Array)
+#5 C:\xampp\htdocs\pbo_rasya\app\Controllers\Login.php(18): App\Models\M_karyawan->cek_login('IE02', '12345')
+#6 C:\xampp\htdocs\pbo_rasya\system\CodeIgniter.php(933): App\Controllers\Login->proses()
+#7 C:\xampp\htdocs\pbo_rasya\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\xampp\htdocs\pbo_rasya\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\pbo_rasya\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\pbo_rasya\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\pbo_rasya\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-12-15 14:15:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: Login/proses]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1787): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `karyawan`
+WHERE `no_karyawan` = :no_karyawan:
+AND `password` = :password:', [...], false)
+ 3 SYSTEMPATH\Model.php(928): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 4 APPPATH\Models\M_karyawan.php(12): CodeIgniter\Model->__call('getWhere', [...])
+ 5 APPPATH\Controllers\Login.php(18): App\Models\M_karyawan->cek_login('IE02', '12345')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->proses()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-12-15 14:15:22 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\pbo_rasya\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\pbo_rasya\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'dbpbo_rasya', 3306, '', 0)
+#1 C:\xampp\htdocs\pbo_rasya\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\pbo_rasya\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\pbo_rasya\system\Database\BaseBuilder.php(1787): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\pbo_rasya\system\Model.php(928): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 C:\xampp\htdocs\pbo_rasya\app\Models\M_karyawan.php(12): CodeIgniter\Model->__call('getWhere', Array)
+#6 C:\xampp\htdocs\pbo_rasya\app\Controllers\Login.php(18): App\Models\M_karyawan->cek_login('IE02', '12345')
+#7 C:\xampp\htdocs\pbo_rasya\system\CodeIgniter.php(933): App\Controllers\Login->proses()
+#8 C:\xampp\htdocs\pbo_rasya\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\xampp\htdocs\pbo_rasya\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\pbo_rasya\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\pbo_rasya\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\pbo_rasya\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\pbo_rasya\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\pbo_rasya\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\pbo_rasya\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\pbo_rasya\system\Database\BaseBuilder.php(1787): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\pbo_rasya\system\Model.php(928): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#4 C:\xampp\htdocs\pbo_rasya\app\Models\M_karyawan.php(12): CodeIgniter\Model->__call('getWhere', Array)
+#5 C:\xampp\htdocs\pbo_rasya\app\Controllers\Login.php(18): App\Models\M_karyawan->cek_login('IE02', '12345')
+#6 C:\xampp\htdocs\pbo_rasya\system\CodeIgniter.php(933): App\Controllers\Login->proses()
+#7 C:\xampp\htdocs\pbo_rasya\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\xampp\htdocs\pbo_rasya\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\pbo_rasya\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\pbo_rasya\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\pbo_rasya\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-12-15 14:15:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: Login/proses]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1787): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `karyawan`
+WHERE `no_karyawan` = :no_karyawan:
+AND `password` = :password:', [...], false)
+ 3 SYSTEMPATH\Model.php(928): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 4 APPPATH\Models\M_karyawan.php(12): CodeIgniter\Model->__call('getWhere', [...])
+ 5 APPPATH\Controllers\Login.php(18): App\Models\M_karyawan->cek_login('IE02', '12345')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->proses()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-12-15 14:15:24 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\pbo_rasya\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\pbo_rasya\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'dbpbo_rasya', 3306, '', 0)
+#1 C:\xampp\htdocs\pbo_rasya\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\pbo_rasya\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\pbo_rasya\system\Database\BaseBuilder.php(1787): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\pbo_rasya\system\Model.php(928): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 C:\xampp\htdocs\pbo_rasya\app\Models\M_karyawan.php(12): CodeIgniter\Model->__call('getWhere', Array)
+#6 C:\xampp\htdocs\pbo_rasya\app\Controllers\Login.php(18): App\Models\M_karyawan->cek_login('IE02', '12345')
+#7 C:\xampp\htdocs\pbo_rasya\system\CodeIgniter.php(933): App\Controllers\Login->proses()
+#8 C:\xampp\htdocs\pbo_rasya\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\xampp\htdocs\pbo_rasya\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\pbo_rasya\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\pbo_rasya\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\pbo_rasya\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\pbo_rasya\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\pbo_rasya\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\pbo_rasya\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\pbo_rasya\system\Database\BaseBuilder.php(1787): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\pbo_rasya\system\Model.php(928): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#4 C:\xampp\htdocs\pbo_rasya\app\Models\M_karyawan.php(12): CodeIgniter\Model->__call('getWhere', Array)
+#5 C:\xampp\htdocs\pbo_rasya\app\Controllers\Login.php(18): App\Models\M_karyawan->cek_login('IE02', '12345')
+#6 C:\xampp\htdocs\pbo_rasya\system\CodeIgniter.php(933): App\Controllers\Login->proses()
+#7 C:\xampp\htdocs\pbo_rasya\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\xampp\htdocs\pbo_rasya\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\pbo_rasya\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\pbo_rasya\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\pbo_rasya\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-12-15 14:15:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: Login/proses]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1787): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `karyawan`
+WHERE `no_karyawan` = :no_karyawan:
+AND `password` = :password:', [...], false)
+ 3 SYSTEMPATH\Model.php(928): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 4 APPPATH\Models\M_karyawan.php(12): CodeIgniter\Model->__call('getWhere', [...])
+ 5 APPPATH\Controllers\Login.php(18): App\Models\M_karyawan->cek_login('IE02', '12345')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->proses()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-15 14:16:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 14:16:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 14:16:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 14:17:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 14:20:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 14:20:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 14:20:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 23:19:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 23:19:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 23:19:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 23:32:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 23:32:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 23:33:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 23:33:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 23:34:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 23:34:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 23:34:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 23:52:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 23:52:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-15 23:52:38 --> ArgumentCountError: Too few arguments to function App\Models\M_karyawan::update_data(), 5 passed in C:\xampp\htdocs\pbo_rasya\app\Controllers\Karyawan.php on line 161 and exactly 6 expected
+[Method: POST, Route: karyawan/ubah]
+in APPPATH\Models\M_karyawan.php on line 43.
+ 1 APPPATH\Controllers\Karyawan.php(161): App\Models\M_karyawan->update_data('IE03', 'Kevin', 'Jalan Angkrek no 1', '12345678', '1765842758_437c34f3847655b8dd12.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Karyawan->ubah()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-15 23:52:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-15 23:52:39 --> ArgumentCountError: Too few arguments to function App\Models\M_karyawan::update_data(), 5 passed in C:\xampp\htdocs\pbo_rasya\app\Controllers\Karyawan.php on line 161 and exactly 6 expected
+[Method: POST, Route: karyawan/ubah]
+in APPPATH\Models\M_karyawan.php on line 43.
+ 1 APPPATH\Controllers\Karyawan.php(161): App\Models\M_karyawan->update_data('IE03', 'Kevin', 'Jalan Angkrek no 1', '12345678', '1765842759_baf894f6ffcd8d4c3efa.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Karyawan->ubah()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-15 23:59:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-15 23:59:27 --> ErrorException: Undefined variable $ShashedPassword
+[Method: POST, Route: karyawan/ubah]
+in APPPATH\Controllers\Karyawan.php on line 160.
+ 1 APPPATH\Controllers\Karyawan.php(160): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ShashedPassword', 'C:\\xampp\\htdocs\\pbo_rasya\\app\\Controllers\\Karyawan.php', 160)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Karyawan->ubah()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-15 23:59:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 23:59:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-15 23:59:48 --> ErrorException: Undefined variable $ShashedPassword
+[Method: POST, Route: karyawan/ubah]
+in APPPATH\Controllers\Karyawan.php on line 160.
+ 1 APPPATH\Controllers\Karyawan.php(160): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ShashedPassword', 'C:\\xampp\\htdocs\\pbo_rasya\\app\\Controllers\\Karyawan.php', 160)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Karyawan->ubah()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

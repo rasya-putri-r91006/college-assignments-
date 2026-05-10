@@ -1,0 +1,96 @@
+DEBUG - 2025-12-10 05:33:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 05:38:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 13:01:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 13:01:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 13:01:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 13:01:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 13:01:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 13:08:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 13:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 13:19:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 13:21:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 13:22:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 13:28:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 13:30:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 13:46:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 13:53:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 14:11:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 14:12:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 14:17:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 14:35:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-10 14:35:43 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '. FROM karyawan ORDER BY no_karyawan DESC' at line 2 in C:\xampp\htdocs\pbo_rasya\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\pbo_rasya\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT RIGHT(no...', 0)
+#1 C:\xampp\htdocs\pbo_rasya\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT RIGHT(no...')
+#2 C:\xampp\htdocs\pbo_rasya\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT RIGHT(no...')
+#3 C:\xampp\htdocs\pbo_rasya\system\Model.php(924): CodeIgniter\Database\BaseConnection->query('SELECT RIGHT(no...')
+#4 C:\xampp\htdocs\pbo_rasya\app\Models\M_karyawan.php(20): CodeIgniter\Model->__call('query', Array)
+#5 C:\xampp\htdocs\pbo_rasya\app\Controllers\Karyawan.php(24): App\Models\M_karyawan->nomor_otomatis()
+#6 C:\xampp\htdocs\pbo_rasya\system\CodeIgniter.php(933): App\Controllers\Karyawan->index()
+#7 C:\xampp\htdocs\pbo_rasya\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+#8 C:\xampp\htdocs\pbo_rasya\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\pbo_rasya\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\pbo_rasya\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\pbo_rasya\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-12-10 14:35:43 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '. FROM karyawan ORDER BY no_karyawan DESC' at line 2
+[Method: GET, Route: karyawan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Model.php(924): CodeIgniter\Database\BaseConnection->query('SELECT RIGHT(no_karyawan, 2) AS nomor 
+        . FROM karyawan ORDER BY no_karyawan DESC')
+ 2 APPPATH\Models\M_karyawan.php(20): CodeIgniter\Model->__call('query', [...])
+ 3 APPPATH\Controllers\Karyawan.php(24): App\Models\M_karyawan->nomor_otomatis()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Karyawan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-10 14:35:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '. FROM karyawan ORDER BY no_karyawan DESC' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT RIGHT(no_karyawan, 2) AS nomor 
+        . FROM karyawan ORDER BY no_karyawan DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT RIGHT(no_karyawan, 2) AS nomor 
+        . FROM karyawan ORDER BY no_karyawan DESC')
+ 3 SYSTEMPATH\Model.php(924): CodeIgniter\Database\BaseConnection->query('SELECT RIGHT(no_karyawan, 2) AS nomor 
+        . FROM karyawan ORDER BY no_karyawan DESC')
+ 4 APPPATH\Models\M_karyawan.php(20): CodeIgniter\Model->__call('query', [...])
+ 5 APPPATH\Controllers\Karyawan.php(24): App\Models\M_karyawan->nomor_otomatis()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Karyawan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-10 14:35:43 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '. FROM karyawan ORDER BY no_karyawan DESC' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT RIGHT(no_karyawan, 2) AS nomor 
+        . FROM karyawan ORDER BY no_karyawan DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT RIGHT(no_karyawan, 2) AS nomor 
+        . FROM karyawan ORDER BY no_karyawan DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT RIGHT(no_karyawan, 2) AS nomor 
+        . FROM karyawan ORDER BY no_karyawan DESC')
+ 4 SYSTEMPATH\Model.php(924): CodeIgniter\Database\BaseConnection->query('SELECT RIGHT(no_karyawan, 2) AS nomor 
+        . FROM karyawan ORDER BY no_karyawan DESC')
+ 5 APPPATH\Models\M_karyawan.php(20): CodeIgniter\Model->__call('query', [...])
+ 6 APPPATH\Controllers\Karyawan.php(24): App\Models\M_karyawan->nomor_otomatis()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Karyawan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-10 14:36:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-10 14:36:52 --> ParseError: syntax error, unexpected identifier "karyawan", expecting ")"
+[Method: GET, Route: karyawan]
+in APPPATH\Models\M_karyawan.php on line 21.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\pbo_rasya\\app\\Models\\M_karyawan.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\M_karyawan')
+ 3 APPPATH\Controllers\Karyawan.php(22): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\M_karyawan')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Karyawan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Karyawan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-10 14:37:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
